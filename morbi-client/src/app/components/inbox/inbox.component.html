@@ -1,0 +1,93 @@
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="./assets/img/soccertrial (1).png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">        
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0 search" type="submit"><i class="fas fa-search searchicn"></i></button>
+                </form>
+                <ul class="navbar-nav m-auto text-center hidden-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="gotoVideo()"><i class="fas fa-photo-video"></i> MY VIDEOS </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-comment-dots"></i> INBOX </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fas fa-cog"></i> SETTINGS </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav m-auto">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" (click)="logout()" >LOGOUT</button>
+                        <button class="dropdown-item" (click)="gotoProfile()" >Profile</button>
+                        <button class="dropdown-item" (click)="gotoProfileEdit()" >Profile Edit</button>
+                        <button class="dropdown-item" (click)="gotoVideo()" > Video </button>
+                        <button class="dropdown-item" (click)="gotoIndex()" > Inbox </button>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </div>
+</header>
+  
+<div class="page-2 login-page">
+    <section>
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="tex-center">
+                    <div class="login-page-box" style="width: 380px !important;">
+                        <form  name="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data" method="POST">
+                            <input type="hidden" name="username" [(ngModel)]="form.username" value="{{userDisplay}}"
+                            required #username="ngModel" readonly/>
+                            <div class="input-group rev mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i> </span>
+                                </div>
+                                <input type="text" class="custom-form-control" [(ngModel)]="form.inbox" name="inbox" 
+                                placeholder="text" required #inbox="ngModel" />
+                            </div>
+                            <div class="input-group rev mb-3">
+                                <span class="input-group-text"><i class="fas fa-user"></i> </span>
+                                <label for="orders">Send To &nbsp; </label>
+                                <select name="users" ng-options="user.firstName for user in users" [(ngModel)]="form.sendto" class="custom-form-control">
+                                    <option value="0"> -- Select User -- </option>  
+                                    <option *ngFor="let i of users | async" value="{{i.id}}" >{{i.firstName}}</option>
+                                </select>
+                            </div>
+                            <div class="form-submit text-center">                
+                                <button type="submit"> SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>						
+                </div>
+            </div>
+        </div>
+        
+        <div class="container msg-body" style="margin-bottom: 5px; margin-top: 5px;" *ngFor="let i of inboxs | async">
+            <div class="row justify-content-center align-items-center">
+                <div class="tex-center">
+                    <div class="login-page-box" style="width: 380px !important;">
+                        <h5>{{i.inbox}}</h5>
+                        <p>{{i.username}}</p>
+                    </div>						
+                </div>
+            </div>
+        </div>        
+    </section>
+</div>
+
+  
+  

@@ -1,0 +1,176 @@
+
+a{
+    text-decoration:none;
+}
+
+.logo{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn-morbi-login{
+  color: #000 !important;
+  padding: 5px 7px 5px 7px;
+  width: 70px !important;
+  border-radius: 5px;
+  font-weight: normal;
+  border: 1px solid #000;
+  font-size: 19px; 
+  text-decoration: none!important;
+}
+
+
+.btn-morbi-register{
+  text-align: center;
+  background-color: #00CC7E !important;
+  color: #fff !important;
+  padding: 7px 15px 7px 15px;
+  width: 130px !important;
+  border-radius: 5px;
+  font-weight: normal;
+  border: none;
+  font-size: 19px; 
+  text-decoration: none!important;
+}
+
+
+@media (min-width: 768px) and (max-width: 1366px){
+  .logo{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .btn-morbi-login{
+    color: #000 !important;
+    padding: 3px 5px 3px 5px;
+    width: 50px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: 1px solid #000;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+  
+  
+  .btn-morbi-register{
+    text-align: center;
+    background-color: #00CC7E !important;
+    color: #fff !important;
+    padding: 5px 12px 5px 12px;
+    width: 100px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: none;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  
+  .logo{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .btn-morbi-login{
+    color: #000 !important;
+    padding: 3px 5px 3px 5px;
+    width: 50px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: 1px solid #000;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+  
+
+  
+  .btn-morbi-register{
+    text-align: center;
+    background-color: #00CC7E !important;
+    color: #fff !important;
+    padding: 5px 12px 5px 12px;
+    width: 100px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: none;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+
+  
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px){
+  .logo{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .btn-morbi-login{
+    color: #000 !important;
+    padding: 3px 5px 3px 5px;
+    width: 50px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: 1px solid #000;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+  
+
+  
+  .btn-morbi-register{
+    text-align: center;
+    background-color: #00CC7E !important;
+    color: #fff !important;
+    padding: 5px 12px 5px 12px;
+    width: 100px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: none;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1366px){
+  
+  .logo{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+
+  .btn-morbi-login{
+    color: #000 !important;
+    padding: 3px 5px 3px 5px;
+    width: 50px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: 1px solid #000;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+  
+
+  
+  .btn-morbi-register{
+    text-align: center;
+    background-color: #00CC7E !important;
+    color: #fff !important;
+    padding: 5px 12px 5px 12px;
+    width: 100px !important;
+    border-radius: 5px;
+    font-weight: normal;
+    border: none;
+    font-size: 16px; 
+    text-decoration: none!important;
+  }
+
+}

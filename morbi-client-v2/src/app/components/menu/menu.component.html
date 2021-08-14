@@ -1,0 +1,48 @@
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){		
+        window.addEventListener('scroll', function() {	       
+            if (window.scrollY > 200) {
+                document.getElementById('navbar_top').classList.add('fixed-top');
+                // add padding top to show content behind navbar
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                    document.getElementById('navbar_top').classList.remove('fixed-top');
+                    // remove padding top from body
+                document.body.style.paddingTop = '0';
+            } 
+        });
+    });
+</script>
+
+<style>
+    .fixed-top{
+        top: -40px;
+        transform: translateY(40px);
+        transition: transform .3s;
+    }
+</style>
+
+<!-- ============= COMPONENT ============== -->
+<nav id="navbar_top" class="navbar navbar-expand-lg sticky-top shadow p-3 mb-5 navbar-light bg-light rounded">
+    <div class="container-fluid" style="margin-right: 120px;margin-left: 120px;">
+        <a class="navbar-brand" href="#">
+            <img src="../../../assets/img/morbi-logo-BG-01.png" alt="Logo" class="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">	
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a (click)="gotoLogin()" href="javascript:void(0)" class="btn-morbi-login">Log in </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#"></a></li>
+                <li class="nav-item">
+                    <a class="btn-morbi-register" href="javascript:void(0)" (click)="gotoRegister()"> register </a>
+                </li>
+            </ul>
+        </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+</nav>

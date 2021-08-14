@@ -1,0 +1,92 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+<!-- THIS IS Dashboard -->
+    <app-secure-menu></app-secure-menu>
+
+
+<!----------menu section---------->
+<div class="content-container">
+    <div class="sidebar">
+        <div class="profile-content">
+            <div class="d-flex flex-column align-items-center text-center">
+                <img [src]="url" id="thumbnial" alt="User" class="rounded-circle">
+                <div class="">
+                    <p>Welcome Back,</p>
+                    <h5 style="color: #00CC7E;">{{fstName}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="side-menu">
+            <a href="javascript:void(0)" (mouseover)="changeText1=true" (mouseout)="changeText1=false" (click)="gotoProfile()">
+                <span *ngIf="!changeText1"></span>
+                <span *ngIf="changeText1">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-home menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText2=true" (mouseout)="changeText2=false" (click)="gotoVideo()">
+                <span *ngIf="!changeText2"></span>
+                <span *ngIf="changeText2">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fas fa-video menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Video
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText3=true" (mouseout)="changeText3=false" (click)="gotoIndex()">
+                <span *ngIf="!changeText3"></span>
+                <span *ngIf="changeText3">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-comment-dots menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inbox
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText4=true" (mouseout)="changeText4=false" (click)="gotoSettings()">
+                <span *ngIf="!changeText4"></span>
+                <span *ngIf="changeText4">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-cog menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings
+            </a>
+        </div>
+    </div>
+
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-8 text-left">
+                    <h2>News and Announcements</h2>
+                    <div class="row announcement">                        
+                        <div class="col-12">
+                            <h5>John Doe</h5>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                                invidunt ut labore et dolor magna aliquyam erat, sed diam voluptua.
+                                At vero eos et accusam et justo duo dolores et ea rebum. 
+                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+                            </p>
+                        </div>                    
+                    </div>
+                    <div class="row announcement">
+                        <div class="col-12">
+                            <h5>John Doe</h5>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                                invidunt ut labore et dolor magna aliquyam erat, sed diam voluptua.
+                                At vero eos et accusam et justo duo dolores et ea rebum. 
+                                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!---footer section----->
+<app-footer></app-footer>

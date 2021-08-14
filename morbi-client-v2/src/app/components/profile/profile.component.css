@@ -1,0 +1,266 @@
+/**Font link Raleway**/
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,900&display=swap');
+body {
+	font-family: 'raleway','Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.content-container{
+   margin-bottom: 250px;
+}
+
+/****section menu****/
+
+
+/**** Side Bar ****/
+
+
+.sidebar{
+    height: 100%;
+    width: 360px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FBFBFB;
+    overflow-x: hidden;
+    padding-top: 14px;
+}
+
+
+
+.news{
+    bottom:0;
+    margin-left: 360px;
+    margin-right: 100px;
+}
+
+
+.announcement{
+    background-color: #FAFAFA;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    padding: 25px 25px 25px 25px;
+}
+
+.announcement h5{
+    margin-bottom: 20px;
+}
+
+
+
+.sidebar a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #818181;
+    display: block;
+    font-weight: normal;
+}
+
+.text-secondary{
+    color: #000;
+}
+  
+.sidebar a:hover{
+    color: #000;
+}
+
+.ang-right{
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.side-menu{
+    margin-left: 65px;
+}
+
+.arw_wed{
+    width: 35px;
+}
+
+.menu{
+    margin-bottom: 10px;
+}
+
+
+.profile-content{
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
+
+.profile-content img{
+    width: 100px;
+}
+
+@media (min-width: 1050px) and (max-width: 1400px){
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1366px){
+
+    .sidebar{
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FBFBFB;
+        overflow-x: hidden;
+        padding-top: 16px;
+    }
+
+    .profile-content img{
+        width: 15px;
+    }
+
+    .side-menu{
+        margin-left: 50px;
+    }
+    
+    .arw_wed{
+        width: 20px;
+    }
+    
+    .menu{
+        margin-bottom: 5px;
+    }
+
+    .sidebar a{
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #818181;
+        display: block;
+        font-weight: normal;
+    }
+
+
+    .profile-content{
+        margin-top: 90px;
+        margin-bottom: 20px;
+    }
+    
+    .profile-content img{
+        width: 50px;
+    }
+
+}
+
+
+
+@media (min-width: 320px) and (max-width: 480px){
+    
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px){
+
+    .sidebar{
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FBFBFB;
+        overflow-x: hidden;
+        padding-top: 16px;
+    }
+
+    .profile-content img{
+        width: 15px;
+    }
+
+    .side-menu{
+        margin-left: 50px;
+    }
+    
+    .arw_wed{
+        width: 20px;
+    }
+    
+    .menu{
+        margin-bottom: 5px;
+    }
+
+    .sidebar a{
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #818181;
+        display: block;
+        font-weight: normal;
+    }
+
+
+    .profile-content{
+        margin-top: 110px;
+        margin-bottom: 20px;
+    }
+    
+    .profile-content img{
+        width: 50px;
+    }
+    
+}
+
+@media (min-width: 1024px) and (max-width: 1366px){
+    
+    .profile-content{
+        margin-top: 100px;
+        margin-bottom: 25px;
+    }
+
+    .profile-content img{
+        width: 70px;
+    }
+
+    .sidebar a{
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #818181;
+        display: block;
+        font-weight: normal;
+    }
+
+    .sidebar{
+        height: 100%;
+        width: 290px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FBFBFB;
+        overflow-x: hidden;
+        padding-top: 16px;
+    }
+
+    .side-menu{
+        margin-left: 50px;
+    }
+    
+    .arw_wed{
+        width: 25px;
+    }
+    
+    .menu{
+        margin-bottom: 15px;
+    }
+
+    .sidebar a{
+        padding: 4px 6px 4px 12px;
+        text-decoration: none;
+        font-size: 14px;
+        color: #818181;
+        display: block;
+        font-weight: normal;
+    }
+
+    .ang-right{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+}

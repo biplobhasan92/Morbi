@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+<!-- THIS IS Dashboard -->
+    <app-secure-menu></app-secure-menu>
+
+
+<!----------menu section---------->
+<div class="content-container">
+    <div class="sidebar">
+        <div class="profile-content">
+            <div class="d-flex flex-column align-items-center text-center">
+                <img [src]="url" id="thumbnial" alt="User" class="rounded-circle">
+                <div class="mt-3">
+                <p class="text-secondary mb-1">Welcome Back,</p>
+                <h5 style="color: #00CC7E;">{{fstName}}</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-menu">
+            <a href="javascript:void(0)" (mouseover)="changeText1=true" (mouseout)="changeText1=false" (click)="gotoProfile()">
+                <span *ngIf="!changeText1"></span>
+                <span *ngIf="changeText1">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-home menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText2=true" (mouseout)="changeText2=false" (click)="gotoVideo()">
+                <span *ngIf="!changeText2"></span>
+                <span *ngIf="changeText2">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fas fa-video menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Video
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText3=true" (mouseout)="changeText3=false" (click)="gotoIndex()">
+                <span *ngIf="!changeText3"></span>
+                <span *ngIf="changeText3">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-comment-dots menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inbox
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText4=true" (mouseout)="changeText4=false" (click)="gotoSettings()">
+                <span *ngIf="!changeText4"></span>
+                <span *ngIf="changeText4">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-cog menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings
+            </a>
+        </div>
+
+    </div>
+
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-7 text-center announcement">
+                    <h2>Edit Profile</h2>
+                    <br>                  
+                    <form  name="form" (ngSubmit)="onSubmit()" #f="ngForm" enctype="multipart/form-data" method="POST">
+                        <input type="hidden" name="userid" [(ngModel)]="form.userid" value="{{id}}" #userid="ngModel"/>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="kv-avatar">
+                                        <div class="file-loading">                                    
+                                            <input type="file" name="userimage" [(ngModel)]="form.userimage" (change)="onFileSelect($event)" accept="image/png, image/jpeg" required #userimage="ngModel"/>
+                                        </div>
+                                        <div class="column">
+                                            <figure class="image is-128x128">
+                                                <img [src]="url"  id="thumbnial" style="height: 180px;width: 155px;" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="kv-avatar-hint">
+                                        <small> Select file less than 200 KB</small>&nbsp;&nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-user"></i></span>
+                                    </div>
+                                    <input type="text" name="firstName" [(ngModel)]="form.firstName" class="form-control" value="{{this.firstName}}" required placeholder="First Name" #firstName="ngModel" />
+                                </div>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">                                
+                                <div class="input-group rev mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" name="lastName" [(ngModel)]="form.lastName" class="form-control" value="{{lastName}}" placeholder="Last name" required minlength="6" #lastName="ngModel" />
+                                </div>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <div class="input-group rev mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                    <input type="email" class="form-control" name="email"  value="{{email}}" placeholder="Email" [(ngModel)]="form.email" #email="ngModel" readonly/>
+                                </div>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+                                <div class="input-group rev mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i> </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="phone" value="{{mobile}}" placeholder="Phone" [(ngModel)]="form.phone" #phone="ngModel" required minlength="6" />
+                                </div>
+                            </div>
+                            <div class="col-3"></div>
+                        </div>
+
+                        <div class="form-submit text-center">
+                            <button class="btn btn-primary" type="submit">Update</button>
+                        </div>
+                    </form>               
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </section>
+</div>
+<!---footer section----->
+<app-footer></app-footer>

@@ -1,0 +1,144 @@
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="./assets/img/soccertrial (1).png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">        
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0 search" type="submit"><i class="fas fa-search searchicn"></i></button>
+                </form>
+                <ul class="navbar-nav m-auto text-center hidden-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="gotoVideo()"><i class="fas fa-photo-video"></i> MY VIDEOS </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-comment-dots"></i> INBOX </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fas fa-cog"></i> SETTINGS </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav m-auto">
+                <!--
+                <li class="nav-item">
+                    <a class="link1" (click)="logout()" href="#">LOGOUT</a>
+                </li>  
+                -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" (click)="logout()" >LOGOUT</button>
+                        <button class="dropdown-item" (click)="gotoProfile()" >Profile</button>
+                        <button class="dropdown-item" (click)="gotoProfileEdit()" >Profile Edit</button>
+                        <button class="dropdown-item" (click)="gotoVideo()" > Video </button>
+                        <button class="dropdown-item" (click)="gotoIndex()" > Inbox </button>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </div>
+  </header>
+  
+  <div class="page-2 login-page">
+    <section>
+        <div class="container">
+            <div class="row custom-height justify-content-center align-items-center">
+                <div class="col-xl-4  col-md-7 col-11 tex-center">
+                    <div class="login-page-box" style="margin-bottom: 25px; width: 480px !important;">
+                        <div class="logo text-center">
+                            <h3 class="d-block login"> Edit Profile </h3>
+                        </div>
+                        <form  name="form" (ngSubmit)="onSubmit()" #f="ngForm" enctype="multipart/form-data" method="POST">
+                            <input type="hidden" name="userid" [(ngModel)]="form.userid" value="{{id}}" #userid="ngModel" />
+                            
+                            <div class="input-group mb-3">
+                                <div class="kv-avatar">
+                                    <div class="file-loading">                                    
+                                        <input type="file" name="userimage" [(ngModel)]="form.userimage" (change)="onFileSelect($event)" accept="image/png, image/jpeg" required #userimage="ngModel"/>
+                                    </div>
+                                    <div class="column">
+                                        <figure class="image is-128x128">
+                                            <img [src]="url"  id="thumbnial" style="height: 180px;width: 155px;" />
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="kv-avatar-hint">
+                                    <small> Select file less than 200 KB</small>&nbsp;&nbsp;
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="far fa-user"></i></span>
+                                </div>
+                                <input type="text" name="firstName" [(ngModel)]="form.firstName" class="custom-form-control" value="{{this.firstName}}" required placeholder="First Name" #firstName="ngModel" />
+                            </div>
+
+                            <div class="input-group rev mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input type="text" name="lastName" [(ngModel)]="form.lastName" class="custom-form-control" value="{{lastName}}" placeholder="Last name" required minlength="6" #lastName="ngModel" />
+                            </div>
+
+                            <div class="input-group rev mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <input type="email" class="custom-form-control" name="email"  value="{{email}}" placeholder="Email" [(ngModel)]="form.email" #email="ngModel" readonly/>
+                            </div>
+
+                            <div class="input-group rev mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i> </span>
+                                </div>
+                                <input type="text" class="custom-form-control" name="phone" value="{{mobile}}" placeholder="Phone" [(ngModel)]="form.phone" #phone="ngModel" required minlength="6" />
+                            </div>
+
+                            <div class="form-submit text-center">
+                                <button type="submit"> SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>						
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+  
+  <!------footer section-->
+  <footer>
+    <div class="footer-nav">
+        <ul class="nav">
+            <li class="list"><a href="#">Agb</a></li>
+            <li class="list"><a href="#">Impressum</a></li>
+            <li class="list"><a href="#">Morbi Group</a></li>
+            <li class="list"><a href="#">Morbi Group</a></li>
+            <li class="list"><a href="#">Language: <p class="language">Espanol</p></a></li>
+        </ul>
+    </div>
+    <div class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="footer-last">Morbi 2020 - Copyright</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>

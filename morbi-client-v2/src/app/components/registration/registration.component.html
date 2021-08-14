@@ -1,0 +1,147 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <app-menu></app-menu>
+
+		<section>
+			<div class="mian-content">
+				<div class="container-fluid">
+					<div class="row">						
+						<div class="col-lg-6" style="margin-bottom: 200px;">							
+							<form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+								<div class="container mt-2">
+									<h3>Register now</h3>
+									<p style="font-size: 16px;">And become part of our team.</p>
+
+									<div class="row reg">
+										<div class="col-md-4">
+											<input type="text" name="firstName" [(ngModel)]="form.firstName" placeholder="First Name" required minlength="3" maxlength="20" #firstName="ngModel" class="form-control" />
+											<div class="alert-danger" *ngIf="f.submitted && firstName.invalid">
+												<div *ngIf="firstName.errors.required">First Name is required</div>
+												<div *ngIf="firstName.errors.minlength">
+													First Name must be at least 3 characters
+												</div>
+												<div *ngIf="username.errors.maxlength">
+													First Name must be at most 20 characters
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<input type="text" name="middleName" [(ngModel)]="form.middleName" placeholder="Middle Name" minlength="3" maxlength="20" #middleName="ngModel" required class="form-control" />
+										</div>
+										<div class="col-md-4">
+											<input type="text" name="lastName" [(ngModel)]="form.lastName" placeholder="Last Name" minlength="3" maxlength="20" #lastName="ngModel" required class="form-control" />
+										</div>
+									</div>
+
+
+									<div class="row reg">
+										<div class="col-md-12">
+											<input type="text"  name="username" [(ngModel)]="form.username" placeholder="User Name" required minlength="3" maxlength="50" #username="ngModel" class="form-control"/>
+											<div class="alert-danger" *ngIf="f.submitted && username.invalid">
+												<div *ngIf="username.errors.required">Username is required</div>
+												<div *ngIf="username.errors.minlength">
+													Username must be at least 3 characters
+												</div>
+												<div *ngIf="username.errors.maxlength">
+													Username must be at most 20 characters
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row reg">
+										<div class="col-md-12">
+											<input type="text" name="phone" [(ngModel)]="form.phone" placeholder="Phone" required minlength="3" #phone="ngModel" maxlength="20" class="form-control" />
+											<div class="alert-danger" *ngIf="f.submitted && phone.invalid">
+												<div *ngIf="phone.errors.required">Phone is required</div>
+												<div *ngIf="phone.errors.minlength">
+													Phone must be at least 3 characters
+												</div>
+												<div *ngIf="username.errors.maxlength">
+													Phone must be at most 20 characters
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="row reg">
+										<div class="col-md-6">
+											<input type="password" name="password" [(ngModel)]="form.password" required minlength="6" placeholder="Password" #password="ngModel" class="form-control"/>
+											<div class="alert-danger" *ngIf="f.submitted && password.invalid">
+												<div *ngIf="password.errors.required">Password is required</div>
+												<div *ngIf="password.errors.minlength">
+													Password must be at least 6 characters
+												</div>											
+											</div>
+										</div>
+										<div class="col-md-6">
+											<input type="password" placeholder="Confirm Password" required class="form-control" />
+										</div>
+									</div>
+
+									<div class="row reg">
+										<div class="col-md-12">
+											<input type="text" name="addressLine1" [(ngModel)]="form.addressLine1" placeholder="Address Line 1" required minlength="3" 
+											placeholder="Address Line 1" maxlength="100" #addressLine1="ngModel" class="form-control" />
+										</div>
+									</div>
+	
+									<div class="row reg">
+										<div class="col-md-12">
+											<input type="text" name="addressLine2" [(ngModel)]="form.addressLine2" placeholder="Address Line 2" required minlength="3" 
+											placeholder="Address Line 2" maxlength="100" #addressLine2="ngModel" class="form-control"/>
+										</div>
+									</div>
+
+									<div class="row reg">
+										<div class="col-md-4">
+											<input type="text" name="stateName" [(ngModel)]="form.stateName" placeholder="State" #stateName="ngModel" class="form-control" required/>
+										</div>
+										<div class="col-md-4">
+											<input type="text" name="cityName" [(ngModel)]="form.cityName" placeholder="City" #cityName="ngModel" required class="form-control" />
+										</div>
+										<div class="col-md-4">
+											<input type="text" name="zipCode" [(ngModel)]="form.zipCode" placeholder="Zip Code" required minlength="3" 
+											#zipCode="ngModel" maxlength="10" class="form-control"/>
+										</div>
+									</div>
+
+									<div class="row reg">
+										<div class="col-md-12">
+											<div class="input-control d-flex align-items-center mb-15">
+												<input id="readed" type="checkbox" name="isReadTermsAndCondition" [(ngModel)]="form.isReadTermsAndCondition" #isReadTermsAndCondition="ngModel" />
+												<label for="readed">&nbsp;&nbsp;I have read the terms and conditions </label>
+											</div>
+										</div>
+									</div>
+
+									<div class="row reg">
+										<div class="col-md-12">
+											<div class="input-control mb-15">
+												<button class="btn-continue form-control" type="submit" (click)="signUp()"> Sign Up </button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-2"></div>
+						<div class="col-lg-4" style="margin-bottom:250px;">
+							<div class="home_text">
+								<p>Connect with the <br> best to create <br> your <span class="spltxt"> dream team</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <!-- container //  -->
+        <app-footer></app-footer> 
+    </body>
+</html>

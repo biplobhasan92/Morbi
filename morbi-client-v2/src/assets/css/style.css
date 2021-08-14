@@ -1,0 +1,421 @@
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap');
+
+ body {
+	font-family: 'raleway','Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,input,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	border-color:transparent;
+	box-shadow:0;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'raleway', sans-serif;
+	font-weight: normal;
+	color: #313131;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 600;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #7e7e7e;
+	margin-bottom: 15px;
+}
+
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+/* First Page  */
+.page1 .form-header .l-login a {
+	color: #00a397;
+	padding: 5px;
+	border: 2px solid #D7D7D7;
+	border-radius: 2px;
+	display:block;
+}
+.page1 .custom-class {
+	height:100vh;
+	padding-left:30px;
+	padding-right:30px;
+}
+
+.page1-form-area .form-title h3 {
+	font-family:raleway;
+	font-size:32px;
+}
+.page1-form-area .from-input input {
+	width: 100%;
+	border: 2px solid #D7D7D7;
+	margin-bottom: 15px;
+	border-radius: 2px;
+	padding: 5px 10px;
+}
+.page1-form-area .form-terms p {
+	font-size: 14px;
+	font-weight: 600;
+	color: #191919;
+}
+.page1-form-area .form-terms p a{
+	color:#86D2D8;
+	font-weight: 600;
+	text-decoration:underline;
+	text-decoration-color:#666
+}
+.page1-form-area button {
+	border: 0;
+	width: 100%;
+	background: #BAE000;
+	font-size: 18px;
+	padding: 12px 0;
+	font-weight: 700;
+	color: #2B2B0C;
+	border-radius: 5px;
+}
+.page1 .background-image {
+	height: 100vh;
+	width: 66%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:bottom center;
+}
+.generator-overlay {
+	height:100%;
+	width:100%;
+background: rgb(59,143,231);
+background: -moz-linear-gradient(top,  rgb(59,143,231) 0%, rgb(13,181,68) 100%);
+background: -webkit-linear-gradient(top,  rgb(59,143,231) 0%,rgb(13,181,68) 100%);
+background: linear-gradient(to bottom,  rgb(59,143,231) 0%,rgb(13,181,68) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b8fe7', endColorstr='#0db544',GradientType=0 );
+opacity:.6;
+
+}
+.page1 .background-image p {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    bottom: 90px;
+    left: 30px;
+    font-size: 43px;
+    font-weight: 900;
+    line-height: 1.3;
+    text-shadow: 2px 2px 0px #000;
+    font-style: italic;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+/* 2nd Page */
+.page-2 .input-group-text {
+	background: none;
+	border: 0;
+}
+
+.page-2 .custom-form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:15px;
+  font-weight:700;
+  font-family:raleway;
+  color:#191919;
+}
+.page-2 .custom-form-control::placeholder {
+  font-size:15px;
+  font-weight:700;
+  font-family:raleway;
+  color:#191919;
+}
+.page-2 .custom-form-control::-moz-placeholder { /* Firefox 19+ */
+  font-size:15px;
+  font-weight:700;
+  font-family:raleway;
+  color:#;
+}
+.page-2 .custom-form-control:-ms-input-placeholder { /* IE 10+ */
+  font-size:15px;
+  font-weight:700;
+  font-family:raleway;
+  color:#191919;
+}
+.page-2 .custom-form-control:-moz-placeholder { /* Firefox 18- */
+  font-size:15px;
+  font-weight:700;
+  font-family:raleway;
+  color:#191919;
+}
+.page-2 .custom-height {
+	height:100vh;
+}
+.page-2{
+	width:100%;
+	height:100vh;
+	background: #0578e5;
+background: -moz-linear-gradient(top,  #0578e5 0%, #02ef63 100%);
+background: -webkit-linear-gradient(top,  #0578e5 0%,#02ef63 100%);
+background: linear-gradient(to bottom,  #0578e5 0%,#02ef63 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0578e5', endColorstr='#02ef63',GradientType=0 );
+}
+.page-2 .login-page-box {
+	background: #fff;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	padding-left: 45px;
+	padding-right: 45px;
+	border-radius: 5px;
+}
+.page-2 .input-group {width:100%;}
+.page-2 .input-group .input-group-prepend {
+	width:12%;
+}
+.page-2 .input-group input {
+	width:85%
+}
+.page-2 .logo a {
+	font-size: 50px;
+	font-weight: 300;
+	color: #2DB62C;
+	margin-bottom: 10px;
+}
+.page-2 .input-group-text i {
+	color:#03CA5B;
+}
+.page-2 .input-group:before {
+	content:"";
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:2px;
+background: #42fcf9;
+background: -moz-linear-gradient(left,  #42fcf9 0%, #06b344 100%);
+background: -webkit-linear-gradient(left,  #42fcf9 0%,#06b344 100%);
+background: linear-gradient(to right,  #42fcf9 0%,#06b344 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42fcf9', endColorstr='#06b344',GradientType=1 );
+}
+.page-2 .input-group.rev:before {
+background: #01b542;
+background: -moz-linear-gradient(left,  #01b542 1%, #40fdf9 99%);
+background: -webkit-linear-gradient(left,  #01b542 1%,#40fdf9 99%);
+background: linear-gradient(to right,  #01b542 1%,#40fdf9 99%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01b542', endColorstr='#40fdf9',GradientType=1 );
+}
+
+.page-2 .form-submit a {
+	color:#C45D5E;
+	font-weight:600;
+	font-style:italic;
+	display:block;	
+}
+.page-2 .form-submit button {
+	width:100%;
+	font-size:20px;
+	font-weight:900;
+	color:#070904;
+	border:0;
+	border-radius:30px;
+	margin-top:15px;
+	padding:5px 0;
+	background: #42fcf9;
+background: -moz-linear-gradient(left,  #42fcf9 0%, #06b344 100%);
+background: -webkit-linear-gradient(left,  #42fcf9 0%,#06b344 100%);
+background: linear-gradient(to right,  #42fcf9 0%,#06b344 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42fcf9', endColorstr='#06b344',GradientType=1 );
+}
+
+/*3rd Page */
+.page-3 .custom-position {
+	background-position:bottom center;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.page-3 .background-image {
+	height:100vh;
+	width:100%;
+}
+.page-3 .background-image h4 {
+	font-size: 25px;
+	color: #000000;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-top: 25px;
+}
+.page-3 .background-image .about-us {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 900;
+	color: #000;
+	background: #fff;
+	margin-top: 20px;
+	padding: 7px 20px;
+	border-radius: 2px;
+	display: inline-block;
+	letter-spacing: 2px;
+}
+/* Form Side */
+.page-3 .page3-form-area {
+	padding-left:80px;
+	padding-right:80px;
+	height:100vh;
+}
+.page-3 .page3-form-area .input-control {
+	padding-left:5px;
+	padding-right:5px;
+}
+.page-3 .page3-form-area h5 {
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	text-transform: uppercase;
+	text-align:center;
+}
+.page-3 .page3-form-area .input-control input{
+	width:100%;
+	border:2px solid #555555;
+	border-radius:2px;
+	padding:5px 0px 5px 10px;
+	color:#2C3539;
+	font-size:17px;
+	font-weight:500;
+}
+.page-3 .page3-form-area .input-control input[type=checkbox] {
+	height:10px;
+	width:25px;
+}
+.page-3 .page3-form-area .input-control input[type=checkbox],label {
+	font-size: 18px;
+	font-weight: 400;
+	color: #11c919;
+	margin:0;
+	padding-left:5px;
+	line-height:1;
+}
+.page-3 .page3-form-area .input-control button {
+	display: block;
+	width: 100%;
+	background: #00f062;
+	color: #000;
+	font-size: 16px;
+	text-transform: uppercase;
+	border: 2px solid #555555;
+	border-radius:2px;
+	font-weight: 900;
+	letter-spacing: 1px;
+	padding: 5px 0;
+}
+.page-3 .page3-form-area .input-control input::placeholder {
+	color:#11c919;
+	font-weight:400;
+	font-size:18px;
+}
+
+
+

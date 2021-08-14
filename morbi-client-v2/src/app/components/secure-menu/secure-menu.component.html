@@ -1,0 +1,62 @@
+
+
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){		
+        window.addEventListener('scroll', function() {	       
+            if (window.scrollY > 200) {
+                document.getElementById('navbar_top').classList.add('fixed-top');
+                // add padding top to show content behind navbar
+                navbar_height = document.querySelector('.navbar').offsetHeight;
+                document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+                    document.getElementById('navbar_top').classList.remove('fixed-top');
+                    // remove padding top from body
+                document.body.style.paddingTop = '0';
+            } 
+        });
+    });
+</script>
+
+<style>
+    .fixed-top{
+        top: -40px;
+        transform: translateY(40px);
+        transition: transform .3s;
+    }
+</style>
+
+<!-- ============= COMPONENT ============== -->
+
+<nav id="navbar_top" class="navbar navbar-expand-lg sticky-top shadow p-3 mb-5 navbar-light bg-light rounded">
+    <div class="container-fluid" style="margin-right: 120px;margin-left: 120px;">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="../../../assets/img/morbi-logo-BG-01.png" alt="Logo" />
+            <!--<h2>Brand</h2>-->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <form class="form-inline d-flex justify-content-center">
+                <input class="form-control" type="search" aria-label="Search">
+                <button class="btn my-2 my-sm-0 search" type="submit">
+                    <i class="fas fa-search searchicn"></i>
+                </button>
+            </form>
+            <ul class="navbar-nav m-auto">            
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" 
+                    aria-haspopup="true" aria-expanded="false" style="background-color: #00CC7E;"></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <button class="dropdown-item" (click)="logout()" >LOGOUT</button>
+                        <button class="dropdown-item" (click)="gotoProfile()" >Profile</button>
+                        <button class="dropdown-item" (click)="gotoProfileEdit()" >Profile Edit</button>
+                        <button class="dropdown-item" (click)="gotoVideo()" > Video </button>
+                        <button class="dropdown-item" (click)="gotoIndex()" > Inbox </button>
+                    </div>
+                </div>
+            </ul>
+        </div> 
+    </div> 
+</nav>

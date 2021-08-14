@@ -1,0 +1,55 @@
+<div class="page1 pl-60 position-relative">
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- If Need And 7 Coloum Here -->
+      <div class="for-responsive">
+        <div class="background-image">
+          <p> CONNECT WITH THE BEST TO CREATE YOUR DREAM TEAM</p>
+          <div class="generator-overlay"></div>
+          <div class="gene d-md-none"> <img src="./assets/img/logo-page3.png" alt="" /></div>
+
+        </div>
+      </div>
+
+      <div class=" col-xl-5 col-lg-5 col-md-6 offset-xl-6 offset-lg-6 offset-md-6 custom-responsive-last">
+        <div class="custom-class d-flex align-items-center justify-content-center">
+          <div>
+            <div class="form-header">
+              <div class="logo d-none d-md-inline-block">
+                <a href="#"> <img src="./assets/img/logo.png" alt="ORBI" /> </a>
+              </div>
+              <div class="l-login float-md-right mt-15">
+                <!-- <a href="/login" routerLink="/login">Log in</a> -->
+                <a [routerLink]="['login']"  class="btn btn-link">Log in </a>
+
+              </div>
+            </div>
+            <div class="page1-form-area d-block">
+              <div class="form-title  mt-20 mb-15">
+                <h3> Sign up now - it's free and only takes 2 minutes!</h3>
+              </div>
+              <form action="#">
+                <div class="from-input">
+                  <input type="text" placeholder="First name" name="firstName" [(ngModel)]="signUpData.firstName" required />
+                </div>
+                <div class="from-input">
+                  <input type="text" placeholder="Last name" name="lastName" [(ngModel)]="signUpData.lastName" required />
+                </div>
+                <div class="from-input">
+                  <input type="email" placeholder="E-Mail" name="email" class="form-control" [(ngModel)]="signUpData.email" required autocomplete="off"/>
+                </div>
+                <div class="from-input">
+                  <input type="password" placeholder="Password" name="password" [(ngModel)]="signUpData.password" required/>
+                </div>
+                <div class="form-terms"> <p>By signing up you accept MORBI's
+                  <a href="#">GTC</a> and <a href="#" >Privacy Policy</a>. </p></div>
+                <h4> <button (click)="saveSignUpData()">Continue</button> </h4>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

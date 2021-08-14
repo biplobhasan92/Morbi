@@ -1,0 +1,104 @@
+/**Font link Raleway**/
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,900&display=swap');
+body {
+    font-family: 'raleway','Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/***nav**/
+
+nav .logo{
+    width: 100%;
+    margin: 0 auto;
+}
+.form-inline .search {
+    margin: 0px 0px 0px -65px;
+}
+.form-inline{
+    margin-bottom: 0!important;
+    width: 100%;
+    padding:  0px;
+}
+.searchicn{
+    width: 85%;
+}
+.form-inline .form-control{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100% !important;
+}
+
+
+.form-inline .form-control{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100% !important;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin: 0px 0px 0px -30px;
+}
+
+
+.nav-item .link1{
+   font-family: 'Raleway', sans-serif;
+    background-color: #00db59;
+    padding: 12px 39px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    border: 2px solid #00db59;
+}
+
+
+.nav-item .link1:hover{
+    border-radius: 10px;
+    transition: 0.6s;
+    background-color: white;
+    border: 2px solid #00db59;
+}
+
+
+
+.sidenav{
+  height: 100%;
+  width: 360px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FBFBFB;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+}
+
+
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+
+.searchicn{
+    width: 85%;
+}
+
+.main{
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

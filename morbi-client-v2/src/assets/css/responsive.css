@@ -1,0 +1,124 @@
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.page1 .background-image {
+	width:50%;
+	height:100%;
+}
+.page1 .custom-class {
+	height:100%;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.page-3 .page3-form-area {
+	padding-left:50px;
+	padding-right:50px;
+}
+
+
+
+
+
+
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.page1 .background-image {
+	width:50%;
+	height:100%;
+}
+.page1 .custom-class {
+	height:100%;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.page-3 .background-image,.page-3 .page3-form-area{
+	height:100%;
+}
+.page-3 .page3-form-area {
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+
+
+
+
+}
+
+
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.page1 .background-image {
+	width:100%;
+}
+.page1 .background-image .gene {
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+}
+.page1 .background-image p {
+	left:0;
+	bottom:20px;
+	font-size:25px;
+}
+.custom-responsive-last {
+	margin-top:110vh;
+}
+.page1 .custom-class {
+	height:100%;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+.page1 .form-header .l-login a {
+	font-size:20px;
+	text-align:center;
+}
+.page1-form-area .form-title h3 {
+	font-size:20px;
+}
+.page1.pl-60 {
+	padding-left:0;
+}
+.page-2 .login-page-box {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.page-2 .input-group .input-group-prepend {
+	width:15%;
+}
+.page-3 .background-image,.page-3 .page3-form-area{
+	height:100%;
+}
+.page-3 .background-image {
+	padding: 50px 0;
+}
+.page-3 .page3-form-area {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+
+
+
+
+}
+
+
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+
+
+}

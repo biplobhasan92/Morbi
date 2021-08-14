@@ -1,0 +1,139 @@
+.footer-top{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ededed;
+    background-color: #fff;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.gtc a, .gtc a:hover{
+    color: #fff;
+    margin-right: 20px;
+    font-size: 17px;
+}
+.footer-top a, .footer-top a:hover{
+    color: #000;
+    font-size:17px;
+    font-weight: normal;
+}
+.footer-bottom span{
+    font-size: 17px;
+}
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1366px){
+
+    .footer-top{
+        padding-bottom: 5px;
+        padding-top: 15px;
+        border-top: 1px solid #ededed;
+        background-color: #fff;
+    }
+    
+    footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .gtc a, .gtc a:hover{
+        color: #fff;
+        margin-right: 16px;
+        font-size: 14px;
+    }
+    
+    .footer-top a, .footer-top a:hover{
+        color: #000;
+        font-size:14px;
+        font-weight: normal;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1366px){
+    .footer-top{
+        padding-bottom: 5px;
+        padding-top: 10px;
+        border-top: 1px solid #ededed;
+        background-color: #fff;
+    }
+    
+    footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .footer-top a, .footer-top a:hover{
+        color: #000;
+        font-size:13px;
+        font-weight: normal;
+    }
+
+    .footer-bottom span{
+        font-size: 16px;
+    }
+
+    .gtc a, .gtc a:hover{
+        color: #fff;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px){
+    .footer-top a, .footer-top a:hover{
+        color: #000;
+        font-size:14px;
+        font-weight: normal;
+    }
+
+    .footer-bottom span{
+        font-size: 14px;
+    }
+
+    .gtc a, .gtc a:hover{
+        color: #fff;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px){
+    .footer-top a, .footer-top a:hover{
+        color: #000;
+        font-size:12px;
+        font-weight: normal;
+    }
+
+    footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: 11px;
+    }
+    
+    .footer-bottom span{
+        font-size: 14px;
+    }
+
+    .gtc a, .gtc a:hover{
+        color: #fff;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+}
+
+

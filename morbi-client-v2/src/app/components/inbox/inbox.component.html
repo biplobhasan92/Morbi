@@ -1,0 +1,159 @@
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+<!-- THIS IS Dashboard -->
+    <app-secure-menu></app-secure-menu>
+
+
+<!----------menu section---------->
+<div class="content-container">
+    <div class="sidebar">
+        <div class="profile-content">
+            <div class="d-flex flex-column align-items-center text-center">
+                <img [src]="url" id="thumbnial" alt="User" class="rounded-circle">
+                <div class="mt-3">
+                <p class="text-secondary mb-1">Welcome Back,</p>
+                <h5 style="color: #00CC7E;">{{fstName}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="side-menu">
+            <a href="javascript:void(0)" (mouseover)="changeText1=true" (mouseout)="changeText1=false" (click)="gotoProfile()">
+                <span *ngIf="!changeText1"></span>
+                <span *ngIf="changeText1">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-home menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText2=true" (mouseout)="changeText2=false" (click)="gotoVideo()">
+                <span *ngIf="!changeText2"></span>
+                <span *ngIf="changeText2">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fas fa-video menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Video
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText3=true" (mouseout)="changeText3=false" (click)="gotoIndex()">
+                <span *ngIf="!changeText3"></span>
+                <span *ngIf="changeText3">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-comment-dots menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inbox
+            </a>
+            <a href="javascript:void(0)" (mouseover)="changeText4=true" (mouseout)="changeText4=false" (click)="gotoSettings()">
+                <span *ngIf="!changeText4"></span>
+                <span *ngIf="changeText4">
+                    <i class="fa fa-angle-right ang-right"></i>
+                </span>
+                <i class="fa fa-cog menu"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings
+            </a>
+        </div>
+    </div>
+
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row">                        
+                        <div class="col-lg-2">
+                            <p class="src_head">Inbox</p>
+                        </div>
+                        <div class="col-lg-9">
+                            <form class="form-inline">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn my-2 my-sm-0 search" type="submit">
+                                    <i class="fas fa-search searchicn"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-lg-1">
+                            <button class="add-video">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <form  name="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data" method="POST">
+                        <div class="row">
+                            <div class="col-lg-2"><h5>Send Text</h5></div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" [(ngModel)]="form.inbox" name="inbox" 
+                                placeholder="text" required #inbox="ngModel" />
+                            </div>
+                            <div class="col-lg-4">
+                                <select name="users" ng-options="user.firstName for user in users" [(ngModel)]="form.sendto" class="form-control">
+                                    <option value="0"> -- Select User -- </option>  
+                                    <option *ngFor="let i of users | async" value="{{i.id}}" >{{i.firstName}}</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-1">
+                                <div class="form-submit text-center">                
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <div class="row" *ngFor="let i of inboxs | async">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 text-left">
+                    <div class="row announcement">                        
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>{{i.username}}</h5>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3 fa-icon">
+                                <a href="javascript:void(0)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>   
+                                <a href="javascript:void(0)">
+                                    <i class="fas fa-star"></i>
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                </a>                             
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    {{i.inbox}}
+                                </p>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+</div>
+<!---footer section----->
+<app-footer></app-footer>
+
+  
+  

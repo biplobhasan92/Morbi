@@ -1,0 +1,150 @@
+<div class="page-3 register-page">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 custom-position" style="background-image: url('../../assets/img/background3.jpg'); height: 100vh;">
+				<div class="background-image d-flex text-center justify-content-center align-items-center" >
+					<div>
+						<a href="#"> <img src="../../../assets/img/logo-page3.png" alt="" /> </a>
+						<h4> Register to create your own dream team</h4> 
+						<a href="" class="about-us">About us </a>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+				<div class="page3-form-area d-flex justify-content-center align-items-center">
+				<div>
+					<h5> Register now to become a part of US </h5>
+					<form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+						<div class="row no-gutters">
+							<div class="col-xl-4 col-lg-4">
+								<div class="input-control mb-15">
+                                    <!-- <input type="text" placeholder="First Name" required /> -->
+                                    <input type="text" name="firstName" [(ngModel)]="form.firstName" placeholder="First Name" required minlength="3" 
+									maxlength="20" #firstName="ngModel"/>
+									<div class="alert-danger" *ngIf="f.submitted && firstName.invalid">
+										<div *ngIf="firstName.errors.required">First Name is required</div>
+										<div *ngIf="firstName.errors.minlength">
+										  First Name must be at least 3 characters
+										</div>
+										<div *ngIf="username.errors.maxlength">
+										  First Name must be at most 20 characters
+										</div>
+									  </div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4 col-md-6">
+								<div class="input-control mb-15">
+                                    <!-- <input type="text" placeholder="Middle Name" /> -->
+                                    <input type="text" name="middleName" [(ngModel)]="form.middleName" placeholder="Middle Name" minlength="3" 
+                                    maxlength="20" #middleName="ngModel" />
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4 col-md-6">
+								<div class="input-control mb-15">
+                                    <!-- <input type="text" placeholder="Last Name" required/> -->
+                                    <input type="text" name="lastName" [(ngModel)]="form.lastName" placeholder="Last Name" minlength="3" 
+                                    maxlength="20" #lastName="ngModel" required />
+								</div>
+							</div>
+							<div class="col-xl-12">
+								<div class="input-control mb-15">
+                                    <!-- <input type="email" placeholder="E-mail Address" required/> -->
+                                    <input type="text"  name="username" [(ngModel)]="form.username" placeholder="User Name" required minlength="3"
+									 maxlength="50" #username="ngModel"/>
+									 <div class="alert-danger" *ngIf="f.submitted && username.invalid">
+										<div *ngIf="username.errors.required">Username is required</div>
+										<div *ngIf="username.errors.minlength">
+										  Username must be at least 3 characters
+										</div>
+										<div *ngIf="username.errors.maxlength">
+										  Username must be at most 20 characters
+										</div>
+									  </div>
+                                </div>
+							</div>
+							<div class="col-xl-12">
+								<div class="input-control mb-15">
+                                    <input type="text" name="phone" [(ngModel)]="form.phone" placeholder="Phone" required minlength="3" 
+									#phone="ngModel" maxlength="20"/>
+									<div class="alert-danger" *ngIf="f.submitted && phone.invalid">
+										<div *ngIf="phone.errors.required">Phone is required</div>
+										<div *ngIf="phone.errors.minlength">
+										  Phone must be at least 3 characters
+										</div>
+										<div *ngIf="username.errors.maxlength">
+										  Phone must be at most 20 characters
+										</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-6">
+								<div class="input-control mb-15">
+                                    <!-- <input type="password" placeholder="Password" required /> -->
+                                    <input type="password" name="password" [(ngModel)]="form.password" required minlength="6"
+									placeholder="Password" #password="ngModel"/>
+									<div class="alert-danger" *ngIf="f.submitted && password.invalid">
+										<div *ngIf="password.errors.required">Password is required</div>
+										<div *ngIf="password.errors.minlength">
+										  Password must be at least 6 characters
+										</div>
+									  
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6 col-lg-6 col-md-6">
+								<div class="input-control mb-15">
+									<input type="password" placeholder="Confirm Password" required />
+								</div>
+							</div>
+							<div class="col-xl-12">
+								<div class="input-control mb-15">
+                                    <!-- <input type="text" placeholder="Address Line 1" required/> -->
+                                    <input type="text" name="addressLine1" [(ngModel)]="form.addressLine1" placeholder="Address Line 1" required minlength="3" 
+                                    placeholder="Address Line 1" maxlength="100" #addressLine1="ngModel"/>
+								</div>
+							</div>
+							<div class="col-xl-12">
+								<div class="input-control mb-15">
+									<!-- <input type="text" placeholder="Address Line 2" /> -->
+									<input type="text" name="addressLine2" [(ngModel)]="form.addressLine2" placeholder="Address Line 2" required minlength="3" 
+                                    placeholder="Address Line 2" maxlength="100" #addressLine2="ngModel"/>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4">
+								<div class="input-control mb-15">
+									<!-- <input type="text" placeholder="State" required/> -->
+									<input type="text" name="stateName" [(ngModel)]="form.stateName" placeholder="State" #stateName="ngModel" required/>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4">
+								<div class="input-control mb-15">
+									<!-- <input type="text" placeholder="City" required/> -->
+									<input type="text" name="cityName" [(ngModel)]="form.cityName" placeholder="City" #cityName="ngModel" required/>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-4">
+								<div class="input-control mb-15">
+									<!-- <input type="text" placeholder="Zip Code" required/> -->
+									<input type="text" name="zipCode" [(ngModel)]="form.zipCode" placeholder="Zip Code" required minlength="3" 
+                                    #zipCode="ngModel" maxlength="10"/>
+								</div>
+							</div>
+							<div class="col-xl-12">
+								<div class="input-control d-flex align-items-center mb-15">
+									<input id="readed" type="checkbox" name="isReadTermsAndCondition" [(ngModel)]="form.isReadTermsAndCondition" #isReadTermsAndCondition="ngModel"/>
+									<label for="readed">I have read the terms and conditions </label>
+								</div>
+							</div>
+							<div class="col-xl-12">
+								<div class="input-control mb-15">
+									<button type="submit" (click)="signUp()"> Sign Up </button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

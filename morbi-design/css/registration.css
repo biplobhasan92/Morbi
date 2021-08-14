@@ -1,0 +1,226 @@
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap');
+
+ body {
+	font-family: 'raleway','Open Sans', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,input,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	border-color:transparent;
+	box-shadow:0;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'raleway', sans-serif;
+	font-weight: normal;
+	color: #313131;
+	margin-top: 0px;
+	font-style: normal;
+	font-weight: 600;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	color: #7e7e7e;
+	margin-bottom: 15px;
+}
+
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+
+.page-3 .custom-position {
+	background-position:bottom center;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.page-3 .background-image {
+	height:100vh;
+	width:100%;
+}
+.page-3 .background-image h4 {
+	font-size: 25px;
+	color: #000000;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-top: 25px;
+}
+.page-3 .background-image .about-us {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 900;
+	color: #000;
+	background: #fff;
+	margin-top: 20px;
+	padding: 7px 20px;
+	border-radius: 2px;
+	display: inline-block;
+	letter-spacing: 2px;
+}
+/* Form Side */
+.page-3 .page3-form-area {
+	padding-left:80px;
+	padding-right:80px;
+	height:100vh;
+}
+.page-3 .page3-form-area .input-control {
+	padding-left:5px;
+	padding-right:5px;
+}
+.page-3 .page3-form-area h5 {
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	text-transform: uppercase;
+	text-align:center;
+}
+.page-3 .page3-form-area .input-control input{
+	width:100%;
+	border:2px solid #555555;
+	border-radius:2px;
+	padding:5px 0px 5px 10px;
+	color:#2C3539;
+	font-size:17px;
+	font-weight:500;
+	background: white;
+}
+.page-3 .page3-form-area .input-control input[type=checkbox] {
+	height:10px;
+	width:25px;
+}
+.page-3 .page3-form-area .input-control input[type=checkbox],label {
+	font-size: 18px;
+	font-weight: 400;
+	color: #11c919;
+	margin:0;
+	padding-left:5px;
+	line-height:1;
+}
+.page-3 .page3-form-area .input-control button {
+	display: block;
+	width: 100%;
+	background: #00f062;
+	color: #000;
+	font-size: 16px;
+	text-transform: uppercase;
+	border: 2px solid #555555;
+	border-radius:2px;
+	font-weight: 900;
+	letter-spacing: 1px;
+	padding: 5px 0;
+}
+.page-3 .page3-form-area .input-control input::placeholder {
+	color:#11c919;
+	font-weight:400;
+	font-size:18px;
+}
+
+
+
